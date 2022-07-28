@@ -1,2 +1,2 @@
 # weather-application
-The first website with responsiveness
+The first website of mine created with responsiveness using HTML,CSS
