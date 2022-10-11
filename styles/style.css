@@ -1,0 +1,11 @@
+@import "bottom-section.css";
+@import "top-section.css";
+@import "middle-section.css";
+@import "vars.css";
+body {
+  background-image: url("../assets/background.svg");
+  background-size: 300%;
+  background-repeat: no-repeat;
+  margin: 0;
+  overflow-x: hidden;
+}

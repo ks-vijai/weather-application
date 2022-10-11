@@ -1,334 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Application</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="section-one">
-        <div class="flex-container">
-            <div class="flex-item-1">
-                <div class="flex-item-1-div">
-                    <img class="dark" src="Images/newyork.svg" width="40%" height="60%">
-                    <div class="first-flex-one">
-                        <select name="cities" id="cities" >
-                            <option value="New Delhi">New Delhi</option>
-                            <option value="Mumbai">Mumbai</option>
-                            <option value="Chennai">Chennai</option>
-                        </select>
-                        <h3 id="time">10:10:<sub>44</sub>
-                            <img src="Images/amState.svg" width="30%" height="40%" ></h3>
-                       <h3 id="date">01-Mar-2020</h3>
-                    </div>
-                </div>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Assignment</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="top-section">
+        <div class="top-section-flex">
+          <div class="city-container">
+            <div class="city-flex">
+              <img
+                class="city-img"
+                src="assets/newyork.svg"
+                alt="City Image"
+                id="city-img"
+              />
+              <div class="city-time-flex">
+                <input
+                  type="text"
+                  name="cities"
+                  list="cities"
+                  class="city-dropdown"
+                  id="city-dropdown"
+                  value="NewYork"
+                  required
+                />
+                <datalist id="cities"> </datalist>
+                <div class="date-time">
+                  <h2 class="city-time" id="city-time">
+                    01:21:<small>46</small>
+                  </h2>
+                  <img
+                    src="assets/amState.svg"
+                    alt="City Image"
+                    class="session-img"
+                    id="session-img"
+                  />
+                  <h2 class="city-date" id="city-date">01-Apr-2020</h2>
+                </div>
+              </div>
             </div>
-            <div class="flex-item-2">
-               <div class="flex-item-2-div">
-                   <div class="third-flex-div">
-                    <h2 style="color:white">Temp &#8451</h2>
-                    <h2 style="color:#FFFFFF;">25 C</h2>
-                    <h2 style="color:white">Temp F</h2>
-                    <h2 style="color:#FFFFFF;"><strong>78 F</strong></h2>
-                   </div>
-                   <div class="flex-line">
-                    <div class="vline"></div>
-                    <div class="v1line"></div>
-                   </div>
-                   
-                  <div class="fourth-flex-div">
-                    <h2 style="color:white">Humidity</h2>
-                    <h2 style="color:#FFFFFF;"><strong>26</strong>%</h2>
-                    <h2 style="color:white">Precipitation</h2>
-                    <h2 style="color:#FFFFFF;"><strong>0</strong>%</h2>
-                  </div>
+          </div>
+          <div class="temp-container">
+            <div class="temp-grid-container">
+              <div class="temp-value-container">
+                <h2 class="temperature-type">Temp &deg;C</h2>
+                <h1 class="temperature-value" id="temperature">23 &deg;C</h1>
+              </div>
+              <div>
+                <div class="vertical-line"></div>
+              </div>
+              <div class="humidity-container">
+                <h2 class="temperature-type">Humidity</h2>
+                <h1 class="temperature-value" id="humidity">52%</h1>
+              </div>
+              <div class="temp-value-container">
+                <h2 class="temperature-type">Temp &deg;F</h2>
+                <h1 class="temperature-value" id="farenheit">73.4 &deg;F</h1>
+              </div>
+              <div>
+                <div class="vertical-line"></div>
+              </div>
+              <div class="humidity-container">
+                <h2 class="temperature-type">Precipitation</h2>
+                <h1 class="temperature-value" id="precipitation">46%</h1>
+              </div>
             </div>
+          </div>
+          <div class="time-container">
+            <div class="time-flex">
+              <div class="flex-items">
+                <p>NOW</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img"
+                  id="weather-image"
+                  src="assets/cloudyIcon.svg"
+                  alt="Cloudy Icon"
+                />
+                <h2 class="bottom-numbers" id="temp-number">23</h2>
+              </div>
+              <div class="flex-items">
+                <div class="center-line"></div>
+              </div>
+              <div class="flex-items">
+                <p class="time-hours">2 AM</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img weather-icons"
+                  src="assets/windyIcon.svg"
+                  alt="Humidity Icon"
+                />
+                <h2 class="bottom-numbers temp-value">18</h2>
+              </div>
+              <div class="flex-items">
+                <div class="center-line"></div>
+              </div>
+              <div class="flex-items">
+                <p class="time-hours">3 AM</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img weather-icons"
+                  src="assets/windyIcon.svg"
+                  alt="Humidity Icon Black"
+                />
+                <h2 class="bottom-numbers temp-value">20</h2>
+              </div>
+              <div class="flex-items">
+                <div class="center-line"></div>
+              </div>
+              <div class="flex-items">
+                <p class="time-hours">4 AM</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img weather-icons"
+                  src="assets/windyIcon.svg"
+                  alt="Precipitation Icon"
+                />
+                <h2 class="bottom-numbers temp-value">18</h2>
+              </div>
+              <div class="flex-items">
+                <div class="center-line"></div>
+              </div>
+              <div class="flex-items">
+                <p class="time-hours">5 AM</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img weather-icons"
+                  src="assets/rainyIcon.svg"
+                  alt="Precipitation Icon Black"
+                />
+                <h2 class="bottom-numbers temp-value">17</h2>
+              </div>
+              <div class="flex-items">
+                <div class="center-line"></div>
+              </div>
+              <div class="flex-items">
+                <p class="time-hours">6 AM</p>
+                <div class="seperator-line"></div>
+                <img
+                  class="time-line-img weather-icons"
+                  src="assets/rainyIcon.svg"
+                  alt="Precipitation Icon Black"
+                />
+                <h2 class="bottom-numbers temp-value">2</h2>
+              </div>
             </div>
-            <div class="flex-item-3">
-               <div class="third-whole-flex">
-                  <div class="third-flex-first">
-                    <p>&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">NOW</p>
-                    <!-- <h3 class="third-flex-line"><strong>|</strong></h3> -->
-                    <div class="line"></div>
-                    <img class="img-cloudy" src="Images/cloudyIcon.svg" width="70%" height="50%">
-                    <p class="bottom-numbers">6</p>
-                  </div>
-                  <div>
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-                  <div class="third-flex-first">
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">11 AM</p>
-                    <!-- <h3 class="third-flex-line"><strong>|</strong></h3> -->
-                    <div class="line"></div>
-                    <img class="img-cloudy" src="Images/humidityIcon.svg" width="70%" height="50%">
-                    <p class="bottom-numbers">7</p>
-                  </div>
-                  <div>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <p>&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-                  <div class="third-flex-first">
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">12 PM</p>
-            <!-- <h3 class="third-flex-line"><strong>|</strong></h3> -->
-            <div class="line"></div>
-            <img class="img-cloudy" src="Images/humidityIconBlack.svg" width="70%" height="50%">
-            <p class="bottom-numbers">7</p>
-                  </div>
-                  <div>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <p>&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-                  <div class="third-flex-first">
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">1 PM</p>
-            <!-- <h3 class="third-flex-line"><strong>|</strong></h3> -->
-            <div class="line"></div>
-            <img class="img-cloudy" src="Images/precipitationIcon.svg" width="70%" height="50%">
-            <p class="bottom-numbers">8</p>
-                  </div>
-                  <div>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <p>&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-                  <div class="third-flex-first">
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">2 PM</p>
-                    <!-- <h3 class="third-flex-line"><strong>|</strong></h3> -->
-                    <div class="line"></div>
-                    <img class="img-cloudy" src="Images/precipitationIconBlack.svg" width="70%" height="50%">
-                    <p class="bottom-numbers">8</p>
-                  </div>
-                  <div>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <p>&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-                  <div class="third-flex-first">
-                    <p >&NegativeVeryThinSpace;</p>
-                    <p style="color:white;">3 PM</p>
-            <h3 class="third-flex-line"><strong>|</strong></h3>
-            <img class="img-cloudy" src="Images/precipitationIconBlack.svg" width="70%" height="50%">
-            <p class="bottom-numbers">6</p>
-                  </div>
-                  <div>
-                    <p class="space">&NegativeVeryThinSpace;</p>
-                    <p>&NegativeVeryThinSpace;</p>
-                    <!-- <h3 style="color:white;padding-top: 10%;"><strong>|</strong></h3> -->
-                    <div class="line-center"></div>
-                  </div>
-               </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <div class="section-two">
-       <div class="top-container">
-            <h3 class="heading-top">Top cities around world</h3>
-            <div class="end" >
-                <img class="icon1" padding="2%" src="Images/sunnyIcon.svg" >
-                <img class="icon1" padding="2%" src="Images/snowflakeIcon.svg" >
-                <img class="icon1" padding="2%" src="Images/cloudyIcon.svg" >
-                 <label class="display" style="color:white;">Display Top :</label>
-                <input type="number" value="4" id="number">
-            </select>
-            </div>
-       </div>
-       <div class="section-two-flex">
-        <!-- <div class="card"> -->
-            <div class="card-container-1">
-               <div class="first-card">
-                 <h2 style="color: white;opacity:1;display:inline-block;">New Delhi</h2>
-                 <div class="card-flex-right">
-                    <img src="Images/sunnyIcon.svg" width="30%" height="30%" >
-                    <h2 class="first-card-h3" >25 &#176 C</h2>
+      </div>
+      <section class="middle-section">
+        <div class="middle-top-container">
+          <h2 class="middle-heading">Top cities around world</h2>
+          <div class="heading-icons">
+            <figure class="temp-icons">
+              <button class="weather-condition" id="sunny-weather">
+                <img
+                  class="icons selected-icon"
+                  id="sunny"
+                  src="assets/sunnyIcon.svg"
+                />
+              </button>
+              <button class="weather-condition" id="snow-weather">
+                <img class="icons" id="snow" src="assets/snowflakeIcon.svg" />
+              </button>
+              <button class="weather-condition" id="rainy-weather">
+                <img class="icons" id="rainy" src="assets/rainyIcon.svg" />
+              </button>
+            </figure>
+            <label class="display" for="input-number">Display Top : </label>
+            <input
+              type="number"
+              id="input-number"
+              value="4"
+              min="3"
+              max="10"
+              class="input-number"
+            />
+          </div>
+        </div>
+        <div class="card-container">
+          <button class="arrow-button backward-button" id="left-carousel">
+            <img alt="Backward Arrow" src="assets/backwardArrow.svg" />
+          </button>
+          <div class="card-section" id="card-section">
+            <div class="cards card-one" id="cards">
+              <div class="card-city">
+                <h2 class="city-name">New Delhi</h2>
+                <div class="card-right">
+                  <div class="heading-icon">
+                    <img
+                      alt="Sunny Icon"
+                      class="sunny-icon"
+                      src="assets/sunnyIcon.svg"
+                    />
+                    <h2 class="degree-temperature">25 °C</h2>
+                  </div>
                 </div>
-               </div>
-              <div>
-                 <h3 style="color: #FFFFFF;position:relative ;">10:00 AM</h3>
-                 <h3 style="color: #FFFFFF;position:relative;">2-Mar-2020</h3>
-                 <img src="Images/humidityIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 53%</p><br><br>
-                 <img src="Images/precipitationIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 10%</p>
-                 <p>&nbsp</p><p>&nbsp</p>
               </div>
-         </div>
-       <!-- </div> -->
-       <!-- <div class="card"> -->
-        <div class="card-container-2">
-           <div class="first-card">
-             <h2 style="color: white;opacity:1;display:inline-block;">New Delhi</h2>
-             <div class="card-flex-right">
-                <img src="Images/sunnyIcon.svg" width="30%" height="30%" >
-                <h2 class="first-card-h3" >25 &#176 C</h2>
-            </div>
-           </div>
-          <div>
-             <h3 style="color: #FFFFFF;position:relative ;">10:00 AM</h3>
-             <h3 style="color: #FFFFFF;position:relative;">2-Mar-2020</h3>
-             <img src="Images/humidityIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 53%</p><br><br>
-             <img src="Images/precipitationIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 10%</p>
-             <p>&nbsp</p><p>&nbsp</p>
-          </div>
-         </div>
-         <!-- </div> -->
-         <!-- <div class="card"> -->
-            <div class="card-container-3">
-               <div class="first-card">
-                 <h2 style="color: white;opacity:1;display:inline-block;">New Delhi</h2>
-                 <div class="card-flex-right">
-                    <img src="Images/sunnyIcon.svg" width="30%" height="30%" >
-                    <h2 class="first-card-h3" >25 &#176 C</h2>
+              <div class="card-bottom">
+                <h3>10:00 AM</h3>
+                <h3 class="card-date">2-Mar-2020</h3>
+                <div class="temp-icons">
+                  <img alt="Humidity-Icon" src="assets/humidityIcon.svg" />
+                  <p class="temperature-icons">53%</p>
                 </div>
-               </div>
-              <div>
-                 <h3 style="color: #FFFFFF;position:relative ;">10:00 AM</h3>
-                 <h3 style="color: #FFFFFF;position:relative;">2-Mar-2020</h3>
-                 <img src="Images/humidityIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 53%</p><br><br>
-                 <img src="Images/precipitationIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 10%</p>
-                 <p>&nbsp</p><p>&nbsp</p>
+                <div class="temp-icons">
+                  <img
+                    alt="Precipitation-Icon"
+                    src="assets/precipitationIcon.svg"
+                  />
+                  <p class="temperature-icons">10%</p>
+                </div>
               </div>
             </div>
-          <!-- </div> -->
-          <!-- <div class="card"> -->
-            <div class="card-container-4">
-               <div class="first-card">
-                 <h2 style="color: white;opacity:1;display:inline-block;">New Delhi</h2>
-                 <div class="card-flex-right">
-                    <img src="Images/sunnyIcon.svg" width="30%" height="30%" >
-                    <h2 class="first-card-h3" >25 &#176 C</h2>
+            <div class="cards card-two" id="cards">
+              <div class="card-city">
+                <h2 class="city-name">Maseru</h2>
+                <div class="card-right">
+                  <div class="heading-icon">
+                    <img
+                      alt="Sunny Icon"
+                      class="sunny-icon"
+                      src="assets/sunnyIcon.svg"
+                    />
+                    <h2 class="degree-temperature">43 °C</h2>
+                  </div>
                 </div>
-               </div>
-              <div>
-                 <h3 style="color: #FFFFFF;position:relative ;">10:00 AM</h3>
-                 <h3 style="color: #FFFFFF;position:relative;">2-Mar-2020</h3>
-                 <img src="Images/humidityIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 53%</p><br><br>
-                 <img src="Images/precipitationIcon.svg"><p style="color:#FFFFFF;display: inline;">&nbsp 10%</p>
-                 <p>&nbsp</p><p>&nbsp</p>
               </div>
-         </div>
-       <!-- </div> -->
-       </div>
-    </div>
-    <section class="third-section">
-        <br><Br>
-            <div class="second-section-div">
-                <h2 style="color: #FFFFFF;margin-left: 5%;display:inline;">Cities across continents at a glance</h2>
-                <h4 class="second-section-h" >Continent Name  &#8595</h4>
-                <h4 class="second-section-h2" style="color:#FFFFFF;display: inline;">Temperature  &#8593</h4>
+              <div class="card-bottom">
+                <h3>10:00 AM</h3>
+                <h3 class="card-date">2-Mar-2020</h3>
+                <div class="temp-icons">
+                  <img alt="Humidity-Icon" src="assets/humidityIcon.svg" />
+                  <p class="temperature-icons">53%</p>
                 </div>
-    </section>
-    <section class="grid-section">
-        <div class="grid-container">
-          <div class="div-first">    
-             <h3 class="country" >Asia</h3>
-             <h2 style="color:#FFFFFF">38 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Delhi, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
+                <div class="temp-icons">
+                  <img
+                    alt="Precipitation-Icon"
+                    src="assets/precipitationIcon.svg"
+                  />
+                  <p class="temperature-icons">10%</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards card-three" id="cards">
+              <div class="card-city">
+                <h2 class="city-name">Kolkata</h2>
+                <div class="card-right">
+                  <div class="heading-icon">
+                    <img
+                      alt="Sunny Icon"
+                      class="sunny-icon"
+                      src="assets/sunnyIcon.svg"
+                    />
+                    <h2 class="degree-temperature">34 °C</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <h3>10:00 AM</h3>
+                <h3 class="card-date">2-Mar-2020</h3>
+                <div class="temp-icons">
+                  <img alt="Humidity-Icon" src="assets/humidityIcon.svg" />
+                  <p class="temperature-icons">53%</p>
+                </div>
+                <div class="temp-icons">
+                  <img
+                    alt="Precipitation-Icon"
+                    src="assets/precipitationIcon.svg"
+                  />
+                  <p class="temperature-icons">10%</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards card-four" id="cards">
+              <div class="card-city">
+                <h2 class="city-name">London</h2>
+                <div class="card-right">
+                  <div class="heading-icon">
+                    <img
+                      alt="Sunny Icon"
+                      class="sunny-icon"
+                      src="assets/sunnyIcon.svg"
+                    />
+                    <h2 class="degree-temperature">32 °C</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card-bottom">
+                <h3>10:00 AM</h3>
+                <h3 class="card-date">2-Mar-2020</h3>
+                <div class="temp-icons">
+                  <img alt="Humidity-Icon" src="assets/humidityIcon.svg" />
+                  <p class="temperature-icons">53%</p>
+                </div>
+                <div class="temp-icons">
+                  <img
+                    alt="Precipitation-Icon"
+                    src="assets/precipitationIcon.svg"
+                  />
+                  <p class="temperature-icons">10%</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="div-first">    
-             <h3 class="country" >Africa</h3>
-             <h2 style="color:#FFFFFF">38 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Egypt, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Europe</h3>
-             <h2 style="color:#FFFFFF">26 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">London, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Asia</h3>
-             <h2 style="color:#FFFFFF">37 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Chennai, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Africa</h3>
-             <h2 style="color:#FFFFFF">32 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Egypt, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Europe</h3>
-             <h2 style="color:#FFFFFF">32 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">London, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Asia</h3>
-             <h2 style="color:#FFFFFF">36 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Chennai, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Europe</h3>
-             <h2 style="color:#FFFFFF">30 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">London, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >South America</h3>
-             <h2 style="color:#FFFFFF">35 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Brazil, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Asia</h3>
-             <h2 style="color:#FFFFFF">36 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Delhi, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >   
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >Europe</h3>
-             <h2 style="color:#FFFFFF">28 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">London, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
-          <div class="div-first">    
-             <h3 class="country" >South America</h3>
-             <h2 style="color:#FFFFFF">32 &#8451</h2>
-             <h3 style="color: white;padding-left: 10%;">Brazil, 10:10 AM</h3>
-                 <h2 style="color:#FFFFFF">
-                 <img src="Images/humidityIcon.svg" >
-                 53%</h2>
-          </div>
+          <button class="arrow-button forward-button" id="right-carousel">
+            <img alt="Forward Arrow" src="assets/forwardArrow.svg" />
+          </button>
         </div>
       </section>
-</body>
+      <section class="continent-section">
+        <div class="continent-heading">
+          <div class="cities-heading">Cities across continents at a Glance</div>
+          <div class="sorting-temperature">
+            Continent Name
+            <img
+              class="sort-icons"
+              src="assets/arrowDown.svg"
+              alt="arrowDown Icon"
+              id="continent-arrow"
+              name="continent-arrrow-down"
+            />
+            Temperature
+            <img
+              class="sort-icons"
+              src="assets/arrowUp.svg"
+              alt="arrowUp Icon"
+              id="temperature-arrow"
+              name="temperature-arrow-up"
+            />
+          </div>
+        </div>
+        <div class="continent-grid-section" id="continent-grid-section"></div>
+      </section>
+    </div>
+    <script src="scripts/web-api.js"></script>
+    <script src="./scripts/top-section.js"></script>
+    <script src="./scripts/middle-section.js"></script>
+    <script src="./scripts/bottom-section.js"></script>
+  </body>
 </html>
